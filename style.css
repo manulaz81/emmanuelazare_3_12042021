@@ -1,0 +1,18 @@
+/* paramètres */
+/* No CSS *//*# sourceMappingURL=style.css.map */
+/* src:url ('https://fonts.google.com/share?selection.family=Shrikhand') pour logo et titres*/
+/* src:url ('https://fonts.google.com/share?selection.family=Roboto') pour le texte*/
+
+
+@media screen and  {max-width: 425px)
+{
+body
+{
+    width: 100%;
+}
+#bloc_page
+{
+    width:100%;
+}
+
+}
