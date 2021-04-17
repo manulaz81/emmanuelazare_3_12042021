@@ -1,18 +1,147 @@
-/* paramètres */
 /* No CSS *//*# sourceMappingURL=style.css.map */
-/* src:url ('https://fonts.google.com/share?selection.family=Shrikhand') pour logo et titres*/
-/* src:url ('https://fonts.google.com/share?selection.family=Roboto') pour le texte*/
+/* src:('https://fonts.google.com/share?selection.family=Roboto') pour le texte*/
+/* src:('https://fonts.google.com/share?selection.family=Shrikhand') pour logo et titres*/
+/* colour à mettre */
 
 
-@media screen and  {max-width: 425px)
-{
 body
 {
-    width: 100%;
-}
-#bloc_page
-{
-    width:100%;
+width:100%;
+margin:0;
+border: solid 1px red;
 }
 
+#bloc_page
+{
+    width:95%;
+    margin: auto;
+    border: solid 1px red;
+}
+
+/* header */
+#header_logo
+{
+    width:100%; 
+    margin-bottom: 20px;   
+    margin: auto;
+    text-align: center;
+    border: solid 1px red;
+}
+.header_logo1
+{
+    width:60%;
+    border: solid 1px red;
+
+}
+.header_search
+{
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    background-color: rgb(206, 199, 199);
+    border: solid 1px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_input
+{
+    width: 110px;
+    background-color:rgb(206, 199, 199) ;
+    border:none;   
+}
+.header_icones
+{
+    margin-right: 10px;
+}
+.header_reservation
+{
+    width:100%;
+    font-size: medium;
+    border: solid 1px red;
+}
+h1
+{
+    font-size: xx-large;
+    text-align: center;
+}
+.header_découverte
+{
+    width: 100%;
+    text-align: center;
+    border: solid 1px red;
+}
+.header_boutonexplorer
+{
+    width:100%;
+    margin-top: 20px;
+    text-align: center;
+}
+.bouton_explorer
+{
+    width: 240px;
+    height: 35px;
+    border-radius: 30px;
+    color: white;
+    background-color: pink;
+    margin-bottom: 50px;
+    border: solid 1px red;
+}
+h2
+{
+    width:60%;
+    border: solid 1px red;
+}
+header div a
+{
+    width:100%;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.header_fonctionnementbouton
+{
+    width: 80%;
+    max-width: 400px;
+    height: 40px;
+    text-align: center;
+    margin: 10px;
+    border: grey solid 1px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    
+}
+.header_fonctionnement_number
+{
+    width: 20px;
+    height: 20px;
+    border: greenyellow solid 1px;
+    background-color: greenyellow;
+    text-align: center;
+    border-radius: 30%;
+    margin-left: -6px;
+}
+.header_boutonchoisir
+{
+    width:85%;
+    max-width: 250px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content:flex-start;    
+    flex-direction: row;
+    border: 1px solid red;
+    border-radius: 20px;
+    background-color: grey;
+    margin-left: 0;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.header_fonctionicone
+{
+    margin: 0 15px 0 15px;
 }
