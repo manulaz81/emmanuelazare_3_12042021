@@ -1,0 +1,131 @@
+/*paramètres généraux*/
+
+/* No CSS *//*# sourceMappingURL=style.css.map */
+/* src:('https://fonts.google.com/share?selection.family=Roboto') pour le texte*/
+/* src:('https://fonts.google.com/share?selection.family=Shrikhand') pour logo et titres*/
+/* colour à mettre */
+
+body
+{
+width:98%;
+margin:0;
+border: solid 1px red;
+}
+
+#bloc_page
+{
+    width:100%;
+    margin: auto;
+    border: solid 1px red;
+}
+
+/* header */
+#header_logo
+{
+    width:100%; 
+    margin-bottom: 20px;   
+    margin: auto;
+    text-align: center;
+    border: solid 1px red;
+}
+.header_logo1
+{
+    width:60%;
+    margin-bottom: 10px;
+    border: solid 1px red;
+
+}
+section
+{
+    width:100%;
+height: 1425px;
+border-radius: 20px 20px 0 0;
+border: solid 1px red;
+margin-top: -50px;
+background-color: #f2f2f2;
+
+}
+figure
+{
+    width: 100%;
+    margin: 0;
+}
+
+.restaurants_images
+{
+    width:100%;
+    margin:0;
+    height: 223px;
+    object-fit: cover;
+}
+.nomrestaurant_titre
+{
+    display:flex;
+    align-items: center;
+}
+h1
+{
+    width: 80%;
+    text-align: center;
+}
+.lecoeur
+{
+    text-align: center;
+}
+.entrée_descriptif
+{
+    display: flex;
+    margin:10px;
+    align-items: flex-end;
+    background-color:white;
+    border: solid 1px red;
+    border-radius: 15px;
+}
+.entrée_noms
+{
+    width: 75%;
+    border: solid 1px red;
+}
+.entrées_prix
+{
+    width: 24%;
+    padding-bottom: 15px;
+    border: solid 1px red;
+}
+.boutoncommander
+{
+    width:100%;
+    margin-top: 20px;
+    text-align: center;
+}
+.bouton_commander
+{
+    width: 215px;
+    height: 45px;
+    border-radius: 30px;
+    color: white;
+    background-color: #FF79D9;
+    margin-bottom: 50px;
+    border: solid 1px red;
+}
+footer
+{
+    margin-top: 20px;
+    padding-left: 10px;
+    width: 100%;
+    border: 1px solid red;
+    background-color: rgb(65, 62, 62);
+    color: white;
+}
+.footer_logo
+{
+    margin: 10px 0 10px 0;
+}
+.footericone
+{
+    margin-right:15px;
+}
+.footer_text
+{
+    margin-bottom: 5px;
+}

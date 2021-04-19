@@ -1,3 +1,5 @@
+/*paramètres généraux*/
+
 /* No CSS *//*# sourceMappingURL=style.css.map */
 /* src:('https://fonts.google.com/share?selection.family=Roboto') pour le texte*/
 /* src:('https://fonts.google.com/share?selection.family=Shrikhand') pour logo et titres*/
@@ -6,14 +8,14 @@
 
 body
 {
-width:100%;
+width:98%;
 margin:0;
 border: solid 1px red;
 }
 
 #bloc_page
 {
-    width:95%;
+    width:100%;
     margin: auto;
     border: solid 1px red;
 }
@@ -33,10 +35,15 @@ border: solid 1px red;
     border: solid 1px red;
 
 }
-.header_search
+.reservation
+{
+    width:100%;
+    background-color: #f2f2f2;
+}
+.reservation_search
 {
     width: 100%;
-    margin-top: 10px;
+    margin: 10px 0 10px 0;
     height: 30px;
     background-color: rgb(206, 199, 199);
     border: solid 1px red;
@@ -44,17 +51,17 @@ border: solid 1px red;
     justify-content: center;
     align-items: center;
 }
-.header_input
+.reservation_input
 {
     width: 110px;
     background-color:rgb(206, 199, 199) ;
     border:none;   
 }
-.header_icones
+.reservation_icones
 {
     margin-right: 10px;
 }
-.header_reservation
+.header_reserv
 {
     width:100%;
     font-size: medium;
@@ -65,13 +72,13 @@ h1
     font-size: xx-large;
     text-align: center;
 }
-.header_découverte
+.reservation_découverte
 {
     width: 100%;
     text-align: center;
     border: solid 1px red;
 }
-.header_boutonexplorer
+.reservation_boutonexplorer
 {
     width:100%;
     margin-top: 20px;
@@ -79,11 +86,11 @@ h1
 }
 .bouton_explorer
 {
-    width: 240px;
-    height: 35px;
+    width: 215px;
+    height: 45px;
     border-radius: 30px;
     color: white;
-    background-color: pink;
+    background-color: #FF79D9;
     margin-bottom: 50px;
     border: solid 1px red;
 }
@@ -100,30 +107,31 @@ header div a
     display: block;
 }
 
-.header_fonctionnementbouton
+.reservation_fonctionnementbouton
 {
     width: 80%;
     max-width: 400px;
     height: 40px;
     text-align: center;
     margin: 10px;
+    background: color #f2f2f2;
     border: grey solid 1px;
     border-radius: 20px;
     display: flex;
     align-items: center;
     
 }
-.header_fonctionnement_number
+.reservation_fonctionnement_number
 {
     width: 20px;
-    height: 20px;
-    border: greenyellow solid 1px;
-    background-color: greenyellow;
+    color:white;
+    font-size:large;
+    background-color: #9356DC;
     text-align: center;
-    border-radius: 30%;
+    border-radius: 100%;
     margin-left: -6px;
 }
-.header_boutonchoisir
+.reservation_boutonchoisir
 {
     width:85%;
     max-width: 250px;
@@ -135,13 +143,132 @@ header div a
     flex-direction: row;
     border: 1px solid red;
     border-radius: 20px;
-    background-color: grey;
+    background-color: #f2f2f2;
     margin-left: 0;
     margin: auto;
     margin-bottom: 15px;
 }
 
-.header_fonctionicone
+.reservation_fonctionicone
 {
     margin: 0 15px 0 15px;
+}
+
+.restaurants
+{
+    width: 100%;
+    margin: 0;
+    background-color: #f2f2f2;
+    border: 1px solid red;
+}
+
+.restaurants_images
+{
+    width:100%;
+    margin:0%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+   
+}
+figure
+{
+    margin:0%;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid red;
+}
+h3
+{
+    margin: 5px 0 0 0;
+}
+.restaurants_images_texte
+{
+    width:100%;
+    display: flex;
+    align-items: center;
+}
+.restaurants_title
+{
+    margin-top: 40px;
+}
+.restaurant_images_figcaption
+{
+    width: 70%;
+    margin-left: 5px;
+    font-size:1.1em;
+    border: 1px solid red;
+}
+.restaurants_coeur
+{
+    width:30%;
+    text-align: center;
+    border: 1px solid red;
+}
+section div p
+{
+    margin:0%;
+}
+.lecoeur
+{
+    font-size: 1.5rem;
+}
+.lecoeur:hover
+{
+    color:violet;
+}
+section div a
+{
+    text-decoration: none;
+    color: black;
+}
+
+
+footer
+{
+    margin-top: 20px;
+    padding-left: 10px;
+    width: 100%;
+    border: 1px solid red;
+    background-color: rgb(65, 62, 62);
+    color: white;
+}
+.footer_logo
+{
+    margin: 10px 0 10px 0;
+}
+.footericone
+{
+    margin-right:15px;
+}
+.footer_text
+{
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 426px) and (max-width: 1023px)
+{
+    body
+    {
+    width:90%;
+    margin:0;
+    border: solid 1px red;
+    }
+    
+    #bloc_page
+    {
+        width:80%;
+        margin: auto;
+        border: solid 1px red;
+    }
+    .header_search
+    {
+        width:45%;
+    }
+    .reservation
+    {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+
 }
