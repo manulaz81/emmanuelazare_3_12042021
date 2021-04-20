@@ -245,7 +245,7 @@ footer
     margin-bottom: 5px;
 }
 
-@media screen and (min-width: 426px) and (max-width: 1023px)
+@media screen and (min-width: 730px) 
 {
     body
     {
@@ -260,15 +260,42 @@ footer
         margin: auto;
         border: solid 1px red;
     }
-    .header_search
-    {
-        width:45%;
-    }
-    .reservation
-    {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    
-
+.reservation_fonctionnement
+{
+    display:flex;
+    flex-wrap: wrap;
 }
+  .reservation_boutonchoisir
+  {
+      width: 28%;
+  }
+ h2
+ {
+     width:100%;
+ }
+ .restaurants_cards
+ {
+     display:flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     margin: auto;
+ }
+ section div a 
+ {
+     width:45%;
+     margin-bottom: 15px;
+ }
+
+ section div a figure 
+ {
+width:100%;
+ }
+.reservation_boutonexplorer
+{
+    height:50px;
+}    
+
+ }
+   
+
+

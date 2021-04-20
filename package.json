@@ -1,0 +1,19 @@
+{
+  "name": "projet3bis",
+  "version": "1.0.0",
+  "description": "projet3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manulaz81/emmanuelazare_3_12042021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manulaz81/emmanuelazare_3_12042021/issues"
+  },
+  "homepage": "https://github.com/manulaz81/emmanuelazare_3_12042021#readme"
+}
