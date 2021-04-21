@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/*paramètres généraux*/
+/* No CSS */
+/*# sourceMappingURL=style.css.map */
+/* src:('https://fonts.google.com/share?selection.family=Shrikhand') pour logo et titres*/
+body {
+  width: 98%;
+  margin: 0;
+  border: solid 1px red;
+}
+
+#bloc_page {
+  width: 100%;
+  margin: auto;
+  border: solid 1px red;
+}
+
+/* header */
+#header_logo {
+  width: 100%;
+  margin-bottom: 20px;
+  margin: auto;
+  text-align: center;
+  border: solid 1px red;
+}
+
+.header_logo1 {
+  width: 60%;
+  border: solid 1px red;
+}
+
+.reservation {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.reservation_search {
+  width: 100%;
+  margin: 10px 0 10px 0;
+  height: 30px;
+  background-color: #cec7c7;
+  border: solid 1px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation_input {
+  width: 110px;
+  background-color: #cec7c7;
+  border: none;
+}
+
+.reservation_icones {
+  margin-right: 10px;
+}
+
+.header_reserv {
+  width: 100%;
+  font-size: medium;
+  border: solid 1px red;
+}
+
+h1 {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.reservation_découverte {
+  width: 100%;
+  text-align: center;
+  border: solid 1px red;
+}
+
+.reservation_boutonexplorer {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.bouton_explorer {
+  width: 215px;
+  height: 45px;
+  border-radius: 30px;
+  color: white;
+  background-color: #9356DC;
+  margin-bottom: 50px;
+  border: solid 1px red;
+}
+
+h2 {
+  width: 60%;
+  border: solid 1px red;
+}
+
+header div a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.reservation_fonctionnementbouton {
+  width: 80%;
+  max-width: 400px;
+  height: 40px;
+  text-align: center;
+  margin: 10px;
+  background: color #f2f2f2;
+  border: grey solid 1px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.reservation_fonctionnement_number {
+  width: 20px;
+  color: white;
+  font-size: large;
+  background-color: #9356DC;
+  text-align: center;
+  border-radius: 100%;
+  margin-left: -6px;
+}
+
+.reservation_boutonchoisir {
+  width: 85%;
+  max-width: 250px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  border: 1px solid red;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  margin-left: 0;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.reservation_fonctionicone {
+  margin: 0 15px 0 15px;
+}
+
+.restaurants {
+  width: 100%;
+  margin: 0;
+  background-color: #f2f2f2;
+  border: 1px solid red;
+}
+
+.cardrestaurants__images {
+  width: 100%;
+  margin: 0%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+figure {
+  margin: 0%;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid red;
+}
+
+h3 {
+  margin: 5px 0 0 0;
+}
+
+.restaurants_images_texte {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.restaurants_title {
+  margin-top: 40px;
+}
+
+.restaurant_images_figcaption {
+  width: 70%;
+  margin-left: 5px;
+  font-size: 1.1em;
+  border: 1px solid red;
+}
+
+.restaurants_coeur {
+  width: 30%;
+  text-align: center;
+  border: 1px solid red;
+}
+
+section div p {
+  margin: 0%;
+}
+
+.lecoeur {
+  font-size: 1.5rem;
+}
+
+.lecoeur:hover {
+  color: violet;
+}
+
+section div a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  margin-top: 20px;
+  padding-left: 10px;
+  width: 100%;
+  border: 1px solid red;
+  background-color: #413e3e;
+  color: white;
+}
+
+.footer_logo {
+  margin: 10px 0 10px 0;
+}
+
+.footericone {
+  margin-right: 15px;
+}
+
+.footer_text {
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 730px) {
+  body {
+    width: 90%;
+    margin: 0;
+    border: solid 1px red;
+  }
+
+  #bloc_page {
+    width: 80%;
+    margin: auto;
+    border: solid 1px red;
+  }
+
+  .reservation_fonctionnement {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .reservation_boutonchoisir {
+    width: 28%;
+  }
+
+  h2 {
+    width: 100%;
+  }
+
+  .restaurants_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  section div a {
+    width: 45%;
+    margin-bottom: 15px;
+  }
+
+  section div a figure {
+    width: 100%;
+  }
+
+  .reservation_boutonexplorer {
+    height: 50px;
+  }
+}
+
+/*# sourceMappingURL=styles2.css.map */
