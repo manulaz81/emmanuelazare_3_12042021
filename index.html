@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
     <script src="https://kit.fontawesome.com/b99458d354.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles2.css" />
+    <link rel="stylesheet" href=".sass/styles2.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="loadingspinner"> Chargement ...</div>
     <div id="bloc_page">
         <header>
             <div id="header_logo">
                 <img class="header_logo1" src="Maquettes Ohmyfood/images/logo/ohmyfood.png" title="ohmyfood">
             </div>
         </header>
-        <section class="reservation">
+        <section class="reservationmenu">
             <div class="reservation_search">
 
                 <div class="reservation_icones">
@@ -26,7 +28,7 @@
                 <input class="reservation_input" type="text" name="villes" placeholder="Paris, Belleville">
             </div>
             <div class="reservation_reserv">
-                <h1>Réservez le menu qui vous convient</h1>
+                <h1 class="reservation__titre">Réservez le menu qui vous convient</h1>
                 <div class="reservation_découverte"> Découvrez des restaurants d'exception, sélectionnés par nos soins.
                 </div>
             </div>
@@ -72,39 +74,41 @@
         <section class="restaurants">
             <div class="restaurants_title">
                 <h2>
-                    Restaurant
+                    Restaurants
                 </h2>
             </div>
             <div class="restaurants_cards">
-                <a class="cardrestaurant" href="pagehtml/laplettedugout.html">
+                <a href="./pageshtml/laplettedugout.html">
                     <figure>
                         <img class="cardrestaurants__images"
                             src="maquettes ohmyfood/images/restaurants/lapalettedugout.jpg" title="La palette du gout">
-                        <figcaption class="cardrestaurants_images_texte">
+                            <div class="cardrestaurant__nouveau">Nouveau</div>
+                            <figcaption class="restaurants_images_texte">
                             <div class="restaurant_images_figcaption">
-                                <h3 class="cardrestaurants_heading">La palette du goût</h3>
-                                <p class="cardrestaurants_byline"> Ménilmontant</p>
+                                <h3 class="menu--nomsplats">La palette du goût</h3>
+                                <p class="menu--description">Ménilmontant</p>
                             </div>
                             <div class="restaurants_coeur">
                                 <i class="far fa-heart lecoeur"></i>
                             </div>
                         </figcaption>
+                       
                     </figure>
                 </a>
                 <a href="https://www.google.com/">
                     <figure>
                         <img class="cardrestaurants__images"
                             src="maquettes ohmyfood/images/restaurants/lanoteenchantee.jpg" title="La note enchantée">
-
                         <figcaption class="restaurants_images_texte">
                             <div class="restaurant_images_figcaption">
-                                <h3 class="cardrestaurants_heading">La note enchantée</h3>
-                                <p class="cardrestaurants_byline">Charonne</p>
+                                <h3 class="menu--nomsplats">La note enchantée</h3>
+                                <p class="menu--description">Charonne</p>
                             </div>
                             <div class="restaurants_coeur">
                                 <i class="far fa-heart lecoeur"></i>
                             </div>
                         </figcaption>
+                        <div class="cardrestaurant__nouveau">Nouveau</div>
                     </figure>
                 </a>
                 <a href="https://www.google.com/">
@@ -114,8 +118,8 @@
 
                         <figcaption class="restaurants_images_texte">
                             <div class="restaurant_images_figcaption">
-                                <h3 class="cardrestaurants_heading">À la française</h3>
-                                <p class="cardrestaurants_byline"> Cité Rouge</p>
+                                <h3 class="menu--nomsplats">À la française</h3>
+                                <p class="menu--description"> Cité Rouge</p>
                             </div>
                             <div class="restaurants_coeur">
                                 <i class="far fa-heart lecoeur"></i>
@@ -130,15 +134,17 @@
 
                         <figcaption class="restaurants_images_texte">
                             <div class="restaurant_images_figcaption">
-                                <h3 class="cardrestaurants_heading">Le délice des sens</h3>
-                                <p class="cardrestaurants_byline"> Folie-Méricourt</p>
+                                <h3 class="menu--nomsplats">Le délice des sens</h3>
+                                <p class="menu--description"> Folie-Méricourt</p>
                             </div>
                             <div class="restaurants_coeur">
                                 <i class="far fa-heart lecoeur"></i>
+                                
                             </div>
                         </figcaption>
                     </figure>
                 </a>
+                
             </div>
         </section>
         <footer>

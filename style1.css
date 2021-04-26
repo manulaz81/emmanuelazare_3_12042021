@@ -45,6 +45,7 @@ border: solid 1px red;
 margin-top: -50px;
 
 
+
 }
 figure
 {
@@ -58,6 +59,7 @@ figure
     margin:0;
     height: 223px;
     object-fit: cover;
+    background-color: #FF79D9;
 }
 .nomrestaurant_titre
 {

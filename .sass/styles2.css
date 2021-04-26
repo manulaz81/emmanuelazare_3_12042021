@@ -1,13 +1,15 @@
 @charset "UTF-8";
 /*paramètres généraux*/
+/* No CSS */
 @font-face {
-  font-family: "https://fonts.google.com/share?selection.family=Roboto";
-  font-family: "https://fonts.google.com/share?selection.family=Roboto%7CShrikhand";
+  font-family: 'https://fonts.google.com/share?selection.family=Roboto:wght@500';
+  src: url("https://fonts.google.com/share?selection.family=Roboto:wght@500");
 }
+
 body {
   width: 98%;
   margin: 0;
-  font-family: Roboto, "Times New Roman", Times, sans-serif;
+  font-family: Roboto,'Times New Roman', Times, sans-serif;
   border: solid 1px red;
 }
 
@@ -15,6 +17,48 @@ body {
   width: 100%;
   margin: auto;
   border: solid 1px red;
+}
+
+/*loader*/
+.loadingspinner {
+  border: 1px grey solid;
+  width: 226px;
+  height: 162px;
+  font-size: 2rem;
+  border-top: 10px solid #99E2D0;
+  border-bottom: 10px solid #9356DC;
+  border-radius: 50%;
+  /* centrage page*/
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: spin 10s linear infinite;
+          animation: spin 10s linear infinite;
+}
+
+/*animation loader*/
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate 0deg;
+            transform: rotate 0deg;
+  }
+  100% {
+    -webkit-transform: rotate 360deg;
+            transform: rotate 360deg;
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate 0deg;
+            transform: rotate 0deg;
+  }
+  100% {
+    -webkit-transform: rotate 360deg;
+            transform: rotate 360deg;
+  }
 }
 
 /* header */
@@ -43,15 +87,21 @@ body {
   height: 30px;
   background-color: #cec7c7;
   border: solid 1px red;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-
 .reservation__titre {
-  font-weight: 600;
-  font-size: 1.6rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .reservation_input {
@@ -93,7 +143,7 @@ body {
   height: 45px;
   border-radius: 30px;
   color: white;
-  background-color: #9356DC;
+  background: linear-gradient(37deg, #FF79DA, #9356DC);
   margin-bottom: 50px;
   border: solid 1px red;
 }
@@ -119,8 +169,12 @@ header div a {
   background: color #f2f2f2;
   border: grey solid 1px;
   border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .reservation_fonctionnement_number {
@@ -131,23 +185,40 @@ header div a {
   text-align: center;
   border-radius: 100%;
   margin-left: -6px;
+  font-size: 0.9rem;
+  font-weight: 100;
 }
 
 .reservation_boutonchoisir {
   width: 85%;
   max-width: 250px;
   height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  justify-content: flex-start;
-  flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border: 1px solid red;
   border-radius: 20px;
   background-color: #f2f2f2;
   margin-left: 0;
   margin: auto;
   margin-bottom: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.reservation_boutonchoisir:hover {
+  background: #e4d5f6;
 }
 
 .reservation_fonctionicone {
@@ -165,8 +236,22 @@ header div a {
   width: 100%;
   margin: 0%;
   height: 100px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px 10px 0 0;
+}
+
+.cardrestaurant__nouveau {
+  display: block;
+  border: 1px solid #99E2D0;
+  background: #99E2D0;
+  width: 25%;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  bottom: 5rem;
+  left: 15rem;
 }
 
 figure {
@@ -181,8 +266,12 @@ h3 {
 
 .restaurants_images_texte {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .restaurants_title {
@@ -212,6 +301,7 @@ section div p {
 
 .lecoeur:hover {
   color: violet;
+  background-color: violet;
 }
 
 section div a {
@@ -239,13 +329,18 @@ figure {
   width: 100%;
   margin: 0;
   height: 223px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: #FF79D9;
 }
 
 .nomrestaurant_titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 10px;
   margin-bottom: -25px;
 }
@@ -263,12 +358,16 @@ figure {
 }
 
 .entrée_descriptif {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 10px;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   background-color: white;
   border: solid 1px red;
-  border-radius: 15px;
+  border-radius: 17px;
 }
 
 .menu--titres {
@@ -276,7 +375,8 @@ figure {
   padding-left: 10px;
   font-size: 1rem;
   font-weight: 400;
-  text-decoration: underline #99E2D0 0.5rem;
+  -webkit-text-decoration: underline #99E2D0 0.5rem;
+          text-decoration: underline #99E2D0 0.5rem;
 }
 
 .menu--nomsplats {
@@ -298,15 +398,9 @@ figure {
 
 .menu--prix {
   width: 24%;
-  height: 100%;
   font-weight: 600;
   text-align: center;
   border: solid 1px red;
-  transition:transform 1s ease-in-out;
-
-}
-.menu--prix:hover{
-  transform:  translate(-150%);
 }
 
 .boutoncommander {
@@ -320,7 +414,6 @@ figure {
   height: 45px;
   border-radius: 30px;
   color: white;
-  background-color: #FF79D9;
   margin-bottom: 30px;
   border: solid 1px red;
 }
@@ -352,45 +445,56 @@ footer {
     margin: 0;
     border: solid 1px red;
   }
-
   #bloc_page {
     width: 80%;
     margin: auto;
     border: solid 1px red;
   }
-
   .reservation_fonctionnement {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-
   .reservation_boutonchoisir {
     width: 28%;
   }
-
   h2 {
     width: 100%;
   }
-
   .restaurants_cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: auto;
   }
-
   section div a {
     width: 45%;
     margin-bottom: 15px;
   }
-
   section div a figure {
     width: 100%;
   }
-
   .reservation_boutonexplorer {
     height: 50px;
   }
+  .cardrestaurant__nouveau {
+    display: block;
+    border: 1px solid #99E2D0;
+    background: #99E2D0;
+    width: 25%;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    bottom: 6rem;
+    left: 20rem;
+  }
 }
-
 /*# sourceMappingURL=styles2.css.map */
