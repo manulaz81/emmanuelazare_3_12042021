@@ -7,6 +7,42 @@
 }
 
 /*couleur*/
+#header_logo {
+  width: 100%;
+  margin-bottom: 20px;
+  margin: auto;
+  text-align: center;
+  background-color: aqua;
+  border: solid 1px red;
+}
+
+.header_logo1 {
+  width: 60%;
+  border: solid 1px red;
+}
+
+/*footer*/
+footer {
+  margin-top: 40px;
+  padding-left: 10px;
+  width: 100%;
+  border: 1px solid red;
+  background-color: pink;
+  color: white;
+}
+
+.footer_logo {
+  margin: 10px 0 10px 0;
+}
+
+.footericone {
+  margin-right: 15px;
+}
+
+.footer_text {
+  margin-bottom: 5px;
+}
+
 body {
   width: 98%;
   margin: 0;
@@ -64,19 +100,6 @@ body {
 }
 
 /* header */
-#header_logo {
-  width: 100%;
-  margin-bottom: 20px;
-  margin: auto;
-  text-align: center;
-  border: solid 1px red;
-}
-
-.header_logo1 {
-  width: 60%;
-  border: solid 1px red;
-}
-
 .reservation {
   width: 100%;
   background-color: #f2f2f2;
@@ -244,6 +267,7 @@ header div a {
 }
 
 .cardrestaurant__nouveau {
+  width: 7%;
   display: block;
   border: 1px solid #99E2D0;
   background: #99E2D0;
@@ -251,9 +275,9 @@ header div a {
   text-align: center;
   font-size: 0.9rem;
   font-weight: 500;
-  position: relative;
-  bottom: 5rem;
-  left: 14rem;
+  position: absolute;
+  bottom: -6rem;
+  left: 15rem;
 }
 
 figure {
@@ -410,27 +434,6 @@ figure {
   width: 100%;
   margin-top: 20px;
   text-align: center;
-}
-
-footer {
-  margin-top: 20px;
-  padding-left: 10px;
-  width: 100%;
-  border: 1px solid red;
-  background-color: #413e3e;
-  color: white;
-}
-
-.footer_logo {
-  margin: 10px 0 10px 0;
-}
-
-.footericone {
-  margin-right: 15px;
-}
-
-.footer_text {
-  margin-bottom: 5px;
 }
 
 @media screen and (min-width: 730px) {
