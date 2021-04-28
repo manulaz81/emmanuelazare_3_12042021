@@ -7,10 +7,10 @@
   
 }
 
- $primarycolor:#9356DC;
- $secondarycolor: #FF79DA;
- $tertiarycolor: #99E2D0;
-
+@import "utils/_variables.scss";
+@import "utils/_mixins.scss";
+@import "utils/_placeholders.scss";
+@import "utils/_fonctions.scss";
 
 body
 {
@@ -29,6 +29,7 @@ border: solid 1px red;
 /*loader*/
 .loadingspinner
 {
+    display:none;
     border :1px grey solid;
     width: 226px;
     height: 162px;
@@ -235,7 +236,7 @@ background: lighten($primarycolor, 30%);
     font-weight: 500;
    position: relative;
    bottom :5rem;
-   left: 15rem;
+   left: 14rem;
 }
 figure
 {
@@ -304,6 +305,7 @@ figure
 {
     width: 100%;
     margin: 0;
+    margin-bottom: 10px;
 }
 
 .carddesrestaurants_images
@@ -386,12 +388,7 @@ figure
 }
 .bouton_commander
 {
-    width: 215px;
-    height: 45px;
-    border-radius: 30px;
-    color: white;
-    margin-bottom: 30px;
-    border: solid 1px red;
+@extend .bouton_explorer;
 }
 
 footer

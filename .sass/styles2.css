@@ -6,6 +6,7 @@
   src: url("https://fonts.google.com/share?selection.family=Roboto:wght@500");
 }
 
+/*couleur*/
 body {
   width: 98%;
   margin: 0;
@@ -21,6 +22,7 @@ body {
 
 /*loader*/
 .loadingspinner {
+  display: none;
   border: 1px grey solid;
   width: 226px;
   height: 162px;
@@ -138,7 +140,7 @@ body {
   text-align: center;
 }
 
-.bouton_explorer {
+.bouton_explorer, .bouton_commander {
   width: 215px;
   height: 45px;
   border-radius: 30px;
@@ -251,7 +253,7 @@ header div a {
   font-weight: 500;
   position: relative;
   bottom: 5rem;
-  left: 15rem;
+  left: 14rem;
 }
 
 figure {
@@ -323,6 +325,7 @@ section div a {
 figure {
   width: 100%;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .carddesrestaurants_images {
@@ -407,15 +410,6 @@ figure {
   width: 100%;
   margin-top: 20px;
   text-align: center;
-}
-
-.bouton_commander {
-  width: 215px;
-  height: 45px;
-  border-radius: 30px;
-  color: white;
-  margin-bottom: 30px;
-  border: solid 1px red;
 }
 
 footer {
