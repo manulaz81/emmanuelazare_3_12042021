@@ -4,8 +4,11 @@
   "description": "projet3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    
+    "sass": "sass --watch .sass/styles2.scss:.sass/styles2.css ",
+    "prefix": "postcss .sass/styles2.css --use autoprefixer .sass/"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manulaz81/emmanuelazare_3_12042021.git"
@@ -15,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/manulaz81/emmanuelazare_3_12042021/issues"
   },
-  "homepage": "https://github.com/manulaz81/emmanuelazare_3_12042021#readme"
+  "homepage": "https://github.com/manulaz81/emmanuelazare_3_12042021#readme",
+  "browserslist": "last 4 versions"
 }

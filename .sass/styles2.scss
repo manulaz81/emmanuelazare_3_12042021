@@ -3,50 +3,44 @@
 /* No CSS *//*# sourceMappingURL=style.css.map */
 @font-face {
     font-family:'https://fonts.google.com/share?selection.family=Roboto:wght@500';
-    src:url('https://fonts.google.com/share?selection.family=Roboto:wght@500')
+    src:url('https://fonts.google.com/share?selection.family=Roboto:wght@500');
+   font-family:' https://fonts.google.com/share?selection.family=Shrikhand';
+   src:('https://fonts.google.com/share?selection.family=Shrikhand');
+
   
 }
-
-@import "utils/_variables.scss";
-@import "utils/_mixins.scss";
-@import "utils/_placeholders.scss";
-@import "utils/_fonctions.scss";
-@import "layout/_header.scss";
-@import "layout/_footer.scss";
+@import "./layout/_header.scss";
+@import "./layout/_footer.scss";
+@import "./utils/_variables.scss";
+@import "./utils/_mixins.scss";
+@import "./utils/_placeholders.scss";
+@import "./utils/_fonctions.scss";
 
     
-
 body
 {
 width:98%;
 margin:0;
 font-family:Roboto,'Times New Roman', Times, sans-serif;
-border: solid 1px red;
 }
 
 #bloc_page
 {
     width:100%;
     margin: auto;
-    border: solid 1px red;
 }
 /*loader*/
-.loadingspinner
+.loader
 {
-    display:none;
-    border :1px grey solid;
-    width: 226px;
-    height: 162px;
-    font-size: 2rem;
-    border-top : 10px solid $tertiarycolor;
-    border-bottom: 10px solid $primarycolor;
-    border-radius: 50%;
-       
-         /* centrage page*/
-    margin: auto;
-    position: absolute;
-    top:0; left:0;right: 0;bottom: 0;
-    animation: spin 10s linear infinite;
+width: 100%;
+background-color: $primarycolor;
+
+}
+
+.couvert 
+{
+    border: 1px solid $tertiarycolor;
+    border-radius: 0 50px 50px 0;
 }
 
 /*animation loader*/
@@ -73,8 +67,7 @@ border: solid 1px red;
     width: 100%;
     margin: 10px 0 10px 0;
     height: 30px;
-    background-color: rgb(206, 199, 199);
-    border: solid 1px red;
+    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,12 +77,15 @@ border: solid 1px red;
     font-weight: bold;
     font-size: 1.5rem;
     text-align: center;
-
+}
+.reservez
+{
+    width: 100%;  
 }
 .reservation_input
 {
     width: 110px;
-    background-color:rgb(206, 199, 199) ;
+    background-color:#f2f2f2;
     border:none;   
 }
 .reservation_icones
@@ -100,7 +96,6 @@ border: solid 1px red;
 {
     width:100%;
     font-size: medium;
-    border: solid 1px red;
 }
 .reservation
 {
@@ -112,8 +107,6 @@ border: solid 1px red;
 {
     width: 100%;
     text-align: center;
-    border: solid 1px red;
-
 }
 .reservation_boutonexplorer
 {
@@ -129,12 +122,10 @@ border: solid 1px red;
     color: white;
     background: linear-gradient(37deg, $secondarycolor,$primarycolor);
     margin-bottom: 50px;
-    border: solid 1px red;
 }
 h2
 {
     width:60%;
-    border: solid 1px red;
 }
 header div a
 {
@@ -180,7 +171,6 @@ header div a
     text-align: center;
     justify-content:flex-start;    
     flex-direction: row;
-    border: 1px solid red;
     border-radius: 20px;
     background-color: #f2f2f2;
     margin-left: 0;
@@ -204,7 +194,7 @@ background: lighten($primarycolor, 30%);
     width: 100%;
     margin: 0;
     background-color: #f2f2f2;
-    border: 1px solid red;
+
 }
 
 .cardrestaurants__images
@@ -213,27 +203,29 @@ background: lighten($primarycolor, 30%);
     margin:0%;
     height: 100px;
     object-fit: cover;
+    box-shadow:0px 0px 5px 5px #f2f2f2;
     border-radius: 10px 10px 0 0;
 }
 .cardrestaurant__nouveau
-{
-    width: 7%;
-    display: block;
+{ 
+
+    position: absolute;
+    right: 12px;
+    margin-top: 10px;
     border: 1px solid $tertiarycolor;
     background: $tertiarycolor;
-    width: 25%;
+    width: 19%;
     text-align: center;
     font-size: 0.9rem;
     font-weight: 500;
-   position: absolute;
-   bottom :-6rem;
-   left: 15rem;
+    z-index: 3;
 }
+
 figure
 {
     margin:0%;
     border-radius: 10px 10px 10px 10px;
-    border: 1px solid red;
+   
 }
 h3
 {
@@ -254,14 +246,11 @@ h3
     width: 70%;
     margin-left: 5px;
     font-size:1.1em;
-    border: 1px solid red;
 }
 .restaurants_coeur
 {
     width:30%;
     text-align: center;
-    border: 1px solid red;
-
 }
 section div p
 {
@@ -270,12 +259,38 @@ section div p
 .lecoeur
 {
     font-size: 1.5rem;
+    position: relative;
+    right: 28px;
 }
 .lecoeur:hover
 {
-    color:violet;
-    background-color: violet;
+    font-size: 1.5rem;
+    position: relative;
+    right: 28px; 
 }
+
+.coeurgros:before
+{
+    height: 10px;
+    background-color: white;
+    position: relative;
+    right: 28px;
+    transition: all .5s;
+}
+
+.coeurgros:hover::before
+{
+    color: $primarycolor;
+    position: relative;
+    right: 28px;
+}
+
+.coeurgros
+{
+    font-size: 1.5rem;
+    right: 28px;
+}
+
 section div a
 {
     text-decoration: none;
@@ -287,7 +302,6 @@ section div a
 height: 100%;
 background-color: #f2f2f2;
 border-radius: 20px 20px 0 0;
-border: solid 1px red;
 margin-top: -50px;
 margin-bottom: -20px;
 overflow: overlay;
@@ -305,7 +319,6 @@ figure
     margin:0;
     height: 223px;
     object-fit: cover;
-    background-color: #FF79D9;
 }
 .nomrestaurant_titre
 {
@@ -316,7 +329,7 @@ figure
 }
 .menutitre
 {
-    width: 70%;
+    width: 86%;
     font-family: shrikhand;
     font-size:1.4rem;
     text-align: left;
@@ -332,9 +345,76 @@ figure
     margin:10px;
     align-items: flex-end;
     background-color:white;
-    border: solid 1px red;
     border-radius: 17px;   
-    
+    animation: apparitionmenu 5s;
+}
+
+@keyframes apparitionmenu{
+    0% { 
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:2;
+    }
+}
+.entrée_descriptif2
+{
+    display: flex;
+    margin:10px;
+    align-items: flex-end;
+    background-color:white;
+    border-radius: 17px;   
+    animation: apparitionmenu 10s;
+    animation-delay: 4s;
+}
+
+@keyframes apparitionmenu{
+    0% { 
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:2;
+    }
+}
+.entrée_descriptif3
+{
+    display: flex;
+    margin:10px;
+    align-items: flex-end;
+    background-color:white;
+    border-radius: 17px;   
+    animation: apparitionmenu 15s;
+    animation-delay: 6s;
+}
+
+@keyframes apparitionmenu{
+    0% { 
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:2;
+    }
+}
+
+.restaurant_cards1
+{
+transform: scale(1);
+&:hover {
+    transform: scale(1.02);
+    transition-duration: 1s;
+}
 }
 
 .menu--titres
@@ -361,7 +441,6 @@ figure
 .entrée_noms
 {
     width: 75%;
-    border: solid 1px red;
 }
 
 .menu--prix
@@ -369,7 +448,13 @@ figure
     width: 24%;
     font-weight: 600;
     text-align: center;
-    border: solid 1px red;
+    border: 1px red solid;
+    &:hover{
+        transform: translate(-80px,0);
+        border: 1px red solid;
+        
+    }
+
 }
 .boutoncommander
 {
@@ -384,20 +469,52 @@ figure
 
 
 
-@media screen and (min-width: 730px) 
+@media screen and (min-width: 450px) and (max-width:769px )
+{
+.reservationmenubloc
+{
+    display: flex;
+    
+    
+justify-content: flex-start;
+margin: auto;
+}
+
+.reservation_search
+
+{
+    width: 97%;
+}
+.reservez
+{
+    width: 48%;  
+    border-radius: 10px;
+    order:2;
+    background-color: #f2f2f2;
+}
+.reservation_fonctionnement
+{
+    width:48%;
+    margin-right: 10px;
+    border-radius: 10px;
+    order:1;
+    background-color: #f2f2f2;
+}
+
+}
+
+@media screen and (min-width: 876px) 
 {
     body
     {
-    width:90%;
-    margin:0;
-    border: solid 1px red;
+    width:100%;
+    margin:auto;
     }
     
     #bloc_page
     {
-        width:80%;
+        width:97%;
         margin: auto;
-        border: solid 1px red;
     }
 .reservation_fonctionnement
 {
@@ -424,7 +541,24 @@ figure
      width:45%;
      margin-bottom: 15px;
  }
+ .entrée_descriptif
+{
+    width: 35%;
+}
 
+ .cardrestaurant__nouveau
+ { 
+ 
+     position: absolute;  
+    right: 164px;
+     border: 1px solid $tertiarycolor;
+     background: $tertiarycolor;
+     width: 12%;
+     text-align: center;
+     font-size: 0.9rem;
+     font-weight: 500;
+     margin-top: 10px;
+ }
  section div a figure 
  {
 width:100%;
@@ -433,19 +567,65 @@ width:100%;
 {
     height:50px;
 }    
-.cardrestaurant__nouveau
+footer{
+    width:99%;
+    padding-left: 10px;
+    text-align: justify;
+}
+.repas
 {
-    display: block;
+    width: 100%;
+
+}
+.entrée2
+
+{
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.entrée3
+
+{
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.plats
+{
+    width: 100%;
+}
+.desserts
+{
+    width: 33%;
+}
+.bouton_commander
+{
+    margin-top: 40px;
+}
+.menu
+{
+    height: 550px;
+}
+
+.cardrestaurant__nouveau
+{ 
+
+    position: absolute;
+    right: 12px;
+    margin-top: 10px;
     border: 1px solid $tertiarycolor;
     background: $tertiarycolor;
-    width: 25%;
+    width: 13%;
     text-align: center;
     font-size: 0.9rem;
     font-weight: 500;
-   position: relative;
-   bottom :6rem;
-   left: 20rem;
+    z-index: 3;
 }
+
  }
    
 
