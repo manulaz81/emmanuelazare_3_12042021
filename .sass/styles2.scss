@@ -39,12 +39,11 @@ position: relative;
 
     font-size: 30px;
     text-align: center;
-    border: red solid 1px;
-    background-color: yellow;
     animation: opacité;
     animation-duration: 5s;
+    transition-delay: 1ms;
     position:absolute;
-    top:26%; left:0; right:0; bottom:0;
+    top:25%; left:0; right:0; bottom:0;
     z-index: 1;
     opacity: 0;
     
@@ -114,11 +113,11 @@ widht :15%}
 }
 @keyframes opacité{
 0% { opacity:0;
-background-color: yellow;}
+background-color: $primarycolor;}
 40% { opacity:1;
-background-color: green;}
+background-color: $secondarycolor;}
 100% { opacity: 2;
-background-color: blue;}
+background-color:$tertiarycolor;}
 }
 
 
@@ -270,6 +269,7 @@ background: lighten($primarycolor, 30%);
     margin-top: 10px;
     border: 1px solid $tertiarycolor;
     background: $tertiarycolor;
+    color: green;
     width: 19%;
     text-align: center;
     font-size: 0.9rem;
@@ -288,8 +288,11 @@ h3{
 
 .restaurants_images_texte{
     width:100%;
+    height: 48px;
     display: flex;
     align-items: center;
+    
+    border: red solid 1px;
 }
 
 .restaurants_title{
@@ -299,12 +302,18 @@ h3{
 .restaurant_images_figcaption
 {
     width: 70%;
+    height: 48px;
     margin-left: 5px;
     font-size:1.1em;
+    
+    border: red solid 1px;
 }
 .restaurants_coeur
 {
     width:30%;
+    height: 100%;
+    border: red solid 1px;
+    position: relative;
     text-align: center;
 }
 section div p
@@ -313,38 +322,46 @@ section div p
 }
 .lecoeur
 {
+    width: 100%;
+    height: 100%;
     font-size: 1.5rem;
-    position: relative;
-    right: 28px;
+    border: red solid 1px;
+   margin: auto;
+   color:black;
+   display: flex;
+   align-items: center;
+justify-content: center;   
+    position:absolute;
+    top:0; bottom: 0; right:0; left:0;
+    z-index: 10;
+  
+   
 }
+
 .lecoeur:hover
 {
-    font-size: 1.5rem;
-    position: relative;
-    right: 28px; 
-}
-
-.coeurgros:before
-{
-    height: 10px;
-    background-color: white;
-    position: relative;
-    right: 28px;
-    transition: all .5s;
-}
-
-.coeurgros:hover::before
-{
-    color: $primarycolor;
-    position: relative;
-    right: 28px;
+     
+    display: none;
+     
 }
 
 .coeurgros
 {
     font-size: 1.5rem;
-    right: 28px;
+    display: flex;
+    align-items: center;
+ justify-content: center;
+    position:absolute;
+    top:0; bottom: 0; right:0; left:0;
+   color: transparent; 
+   z-index: 2;
 }
+.coeurgros:hover
+{
+    color: $primarycolor;
+    z-index: 10;
+}
+
 
 section div a
 {
@@ -389,11 +406,7 @@ figure
     font-size:1.4rem;
     text-align: left;
 }
-.lecoeur
-{
-    text-align: center;
-    margin-left: 10px;
-}
+
 .entrée_descriptif
 {
     display: flex;
@@ -617,7 +630,7 @@ width:100%;
 footer{
     width:99%;
     padding-left: 10px;
-    text-align: justify;
+    text-align: center;
 }
 .repas{
     width: 100%;
