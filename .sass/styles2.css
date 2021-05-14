@@ -77,13 +77,15 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  display: inline-block;
   vertical-align: middle;
   border: 5px solid #9356DC;
   position: relative;
   text-align: center;
   margin: auto;
   animation: loaderanim 3s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: -2;
 }
 
@@ -367,6 +369,7 @@ figure {
   height: 48px;
   margin-left: 5px;
   font-size: 1.1em;
+  border: red solid 1px;
 }
 
 .restaurants_coeur {
