@@ -40,19 +40,20 @@ position: relative;
         animation: loadopaque;
     animation-duration: 4s;
     transition-delay: 1ms;
-    // position:absolute;
-    margin: auto;
-    // top:0;  bottom:0;
-    position:fixed;
+    position:absolute;
+    // margin: auto;
+    top:50%;
+    left:50%;
+    transform:translate (-50%,50%); 
     z-index: -2;
-    opacity: 0;    
+     
 }
 
 .loader{
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    // display: inline-block;
+    display: inline-block;
     vertical-align: middle;
     border: 5px solid $primarycolor;
    position:relative;
