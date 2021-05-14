@@ -77,7 +77,6 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  display: inline-block;
   vertical-align: middle;
   border: 5px solid #9356DC;
   position: relative;
@@ -803,7 +802,22 @@ figure {
   background-color: #99E2D0;
   animation: checkrotate 3s;
 }
+.carteresto:hover .checkrotdegrees {
+  border: 1px solid;
+  margin: auto;
+  border-radius: 30px;
+  background-color: #99E2D0;
+  animation: checkrotate 3s;
+}
 
+@keyframes checkrotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate -360deg;
+  }
+}
 @keyframes checkrotate {
   0% {
     transform: rotate(360deg);

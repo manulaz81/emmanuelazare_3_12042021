@@ -52,7 +52,7 @@ position: relative;
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    display: inline-block;
+    // display: inline-block;
     vertical-align: middle;
     border: 5px solid $primarycolor;
    position:relative;
@@ -713,9 +713,7 @@ margin-bottom: -10px;
 .carteresto:hover 
 {
     box-shadow: 0px 1px 0px 0px black; 
-    .prixplat{
-        
-    }
+   
     .checkplat{
         width: 26%;
         z-index: 100;
@@ -729,6 +727,18 @@ margin-bottom: -10px;
         background-color: $tertiarycolor;
         animation: checkrotate 3s;
     }
+    .checkrotdegrees{
+        border: 1px solid;
+        margin: auto;
+        border-radius: 30px;
+        background-color: $tertiarycolor;
+        animation: checkrotate 3s;
+    }
+}
+@keyframes checkrotate
+{
+    0% { transform: rotate(360deg);}
+100%{transform: rotate (-360deg);}
 }
 @keyframes checkrotate
 {
