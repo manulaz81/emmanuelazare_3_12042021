@@ -13,24 +13,22 @@
 </head>
 
 <body>
-    <!-- <div class="loadingspinner"> Wait ...</div> -->
-    <!-- <div class="loaderfood"> -->
 
-        <span class="loader load-quart"><i class="fas fa-utensils couvert"></i></span>
-        Chargement...
-        <div class="barre"></div>
-    <!-- </div> -->
+    <div class="loaderfood">
+    <span class="loader load-quart"><i class="fas fa-utensils couvert"></i></span>
+    Chargement ...
+    <div class="barre"></div>
+    </div>
     <div id="bloc_page">
+        <!-- header -->
         <header>
             <div id="header_logo">
                 <img class="header_logo1" src="Maquettes Ohmyfood/images/logo/ohmyfood.png" title="ohmyfood">
             </div>
         </header>
+        <!-- section -->
         <section class="reservationmenu">
-
-
             <div class="reservation_search">
-
                 <div class="reservation_icones">
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
@@ -51,9 +49,8 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="reservation_fonctionnement">
-                    <h2> Fonctionnement</h2>
+                    <h2 class="titremenu"> Fonctionnement</h2>
                     <div class="reservation_boutonchoisir">
                         <div class="reservation_fonctionnement_number">
                             <label>1</label>
@@ -85,7 +82,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
         <section class="restaurants">
             <div class="restaurants_title">
@@ -95,23 +91,22 @@
             </div>
             <div class="restaurants_cards">
                 <a class="restaurants__carte" href="./.sass/pages/laplettedugout.html">
-
                     <figure class="restaurant_cards1">
                         <span class="cardrestaurant__nouveau">Nouveau</span>
                         <img class="cardrestaurants__images"
                             src="maquettes ohmyfood/images/restaurants/lapalettedugout.jpg" title="La palette du gout">
-
                         <figcaption class="restaurants_images_texte">
                             <div class="restaurant_images_figcaption">
                                 <h3 class="menu--nomsplats">La palette du goût</h3>
                                 <p class="menu--description">Ménilmontant</p>
                             </div>
                             <div class="restaurants_coeur">
-                                <i class="far fa-heart lecoeur"></i>
-                                <i class="fas fa-heart coeurgros"></i>
+                                <div class="containercoeur">
+                                    <i class="far fa-heart coeurvide"></i>
+                                    <i class="fas fa-heart coeurplein"></i>
+                                </div>
                             </div>
                         </figcaption>
-
                     </figure>
                 </a>
                 <a href="./.sass/pages/lanoteenchantee.html">
@@ -119,14 +114,16 @@
                         <span class="cardrestaurant__nouveau">Nouveau</span>
                         <img class="cardrestaurants__images"
                             src="maquettes ohmyfood/images/restaurants/lanoteenchantee.jpg" title="La note enchantée">
-
                         <figcaption class="restaurants_images_texte">
                             <div class="restaurant_images_figcaption">
                                 <h3 class="menu--nomsplats">La note enchantée</h3>
                                 <p class="menu--description">Charonne</p>
                             </div>
                             <div class="restaurants_coeur">
-                                <i class="far fa-heart lecoeur"></i>
+                                <div class="containercoeur">
+                                    <i class="far fa-heart coeurvide"></i>
+                                    <i class="fas fa-heart coeurplein"></i>
+                                </div>
                             </div>
                         </figcaption>
                     </figure>
@@ -135,14 +132,16 @@
                     <figure class="restaurant_cards1">
                         <img class="cardrestaurants__images"
                             src="maquettes ohmyfood/images/restaurants/alafrancaise.jpg" title="A la francaise">
-
                         <figcaption class="restaurants_images_texte">
                             <div class="restaurant_images_figcaption">
                                 <h3 class="menu--nomsplats">À la française</h3>
                                 <p class="menu--description"> Cité Rouge</p>
                             </div>
                             <div class="restaurants_coeur">
-                                <i class="far fa-heart lecoeur"></i>
+                                <div class="containercoeur">
+                                    <i class="far fa-heart coeurvide"></i>
+                                    <i class="fas fa-heart coeurplein"></i>
+                                </div>
                             </div>
                         </figcaption>
                     </figure>
@@ -151,30 +150,29 @@
                     <figure class="restaurant_cards1">
                         <img class="cardrestaurants__images"
                             src="maquettes ohmyfood/images/restaurants/lapalettedugout.jpg" title="le délice des sens">
-
                         <figcaption class="restaurants_images_texte">
                             <div class="restaurant_images_figcaption">
                                 <h3 class="menu--nomsplats">Le délice des sens</h3>
                                 <p class="menu--description"> Folie-Méricourt</p>
                             </div>
                             <div class="restaurants_coeur">
-                                <i class="far fa-heart lecoeur"></i>
-
+                                <div class="containercoeur">
+                                    <i class="far fa-heart coeurvide"></i>
+                                    <i class="fas fa-heart coeurplein"></i>
+                                </div>
                             </div>
                         </figcaption>
                     </figure>
                 </a>
-
             </div>
         </section>
+        <!-- footer -->
         <footer>
-
             <div class="footer_logo">ohmyfood</div>
             <div class="footer_text"><i class="fas fa-utensils footericone"></i> Proposer un restaurant</div>
             <div class="footer_text"><i class="fas fa-hands-helping footericone"></i>Devenir un partenaire</div>
             <div class="footer_text">Mentions légales</div>
             <div class="footer_text">Contact</div>
-
         </footer>
     </div>
     </div>

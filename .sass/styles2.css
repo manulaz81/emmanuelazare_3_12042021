@@ -25,7 +25,7 @@ footer {
   text-align: center;
   width: 99%;
   color: white;
-  background-color: grey;
+  background-color: #201f1f;
   font-size: 0.8rem;
   font-weight: 500;
 }
@@ -45,9 +45,11 @@ footer {
 }
 
 /*couleur*/
+/*fonts*/
+/*page index*/
 body {
   width: 98%;
-  margin: 0;
+  margin: auto;
   font-family: Roboto, "Times New Roman", Times, sans-serif;
   position: relative;
 }
@@ -62,16 +64,12 @@ body {
   width: 100%;
   height: 100%;
   font-size: 30px;
-  text-align: center;
-  animation: opacité;
-  animation-duration: 5s;
+  animation: loadopaque;
+  animation-duration: 4s;
   transition-delay: 1ms;
-  position: absolute;
-  top: 25%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
+  margin: auto;
+  position: fixed;
+  z-index: -2;
   opacity: 0;
 }
 
@@ -83,8 +81,10 @@ body {
   vertical-align: middle;
   border: 5px solid #9356DC;
   position: relative;
+  text-align: center;
   margin: auto;
-  animation: loaderanim 5s linear infinite;
+  animation: loaderanim 3s linear;
+  z-index: -2;
 }
 
 /*loader quart de cercle*/
@@ -103,7 +103,8 @@ body {
   border-top: turquoise 5px solid;
   border-bottom: turquoise 5px solid;
   animation-name: loaderanim;
-  animation-duration: 5s;
+  animation-duration: 3s;
+  z-index: -2;
 }
 
 @keyframes loaderanim {
@@ -116,19 +117,21 @@ body {
 }
 .couvert {
   margin: 0;
-  padding-top: 10px;
+  padding: 10px;
+  margin: auto;
 }
 
 .barre {
-  width: 10%;
+  width: 5%;
   margin: auto;
   vertical-align: middle;
   background-color: white;
   border: #f2f2f2 1px solid;
   text-align: center;
-  height: 3px;
+  height: 2px;
   animation-name: animebarre;
-  animation-duration: 10s;
+  animation-duration: 3s;
+  z-index: -2;
 }
 
 @keyframes animebarre {
@@ -137,29 +140,37 @@ body {
   }
   15% {
     background-color: #9356DC;
-    widht: 15%;
+    widht: 5%;
   }
   45% {
     background-color: #FF79DA;
-    width: 35%;
+    width: 10%;
   }
   100% {
     background-color: #99E2D0;
-    width: 60%;
+    width: 15%;
   }
 }
-@keyframes opacité {
+@keyframes loadopaque {
   0% {
     opacity: 0;
-    background-color: #9356DC;
+    background-color: white;
+    z-index: 20;
   }
   40% {
     opacity: 1;
-    background-color: #FF79DA;
+    background-color: white;
+    z-index: 20;
+  }
+  95% {
+    opacity: 1;
+    background-color: white;
+    z-index: 10;
   }
   100% {
     opacity: 2;
-    background-color: #99E2D0;
+    background-color: white;
+    z-index: 10;
   }
 }
 /* header */
@@ -230,8 +241,10 @@ body {
   margin-bottom: 50px;
 }
 
-h2 {
-  width: 60%;
+.titremenu {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 25px;
 }
 
 header div a {
@@ -267,9 +280,9 @@ header div a {
 }
 
 .reservation_boutonchoisir {
-  width: 85%;
-  max-width: 250px;
-  height: 35px;
+  width: 95%;
+  max-width: 300px;
+  height: 42px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -287,6 +300,9 @@ header div a {
 .reservation_boutonchoisir:hover {
   background: #e4d5f6;
 }
+.reservation_boutonchoisir:hover .reservation_fonctionicone:hover {
+  color: #9356DC;
+}
 
 .reservation_fonctionicone {
   margin: 0 15px 0 15px;
@@ -294,6 +310,7 @@ header div a {
 
 .restaurants {
   width: 100%;
+  height: 726px;
   margin: 0;
   background-color: #f2f2f2;
 }
@@ -314,7 +331,7 @@ header div a {
   border: 1px solid #99E2D0;
   background: #99E2D0;
   color: green;
-  width: 19%;
+  width: 22%;
   text-align: center;
   font-size: 0.9rem;
   font-weight: 500;
@@ -326,7 +343,7 @@ figure {
   border-radius: 10px 10px 10px 10px;
 }
 
-h3 {
+.menu--nomsplats {
   margin: 5px 0 0 0;
 }
 
@@ -335,11 +352,14 @@ h3 {
   height: 48px;
   display: flex;
   align-items: center;
-  border: red solid 1px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .restaurants_title {
   margin-top: 40px;
+  padding-top: 10px;
+  padding-left: 8px;
 }
 
 .restaurant_images_figcaption {
@@ -347,62 +367,66 @@ h3 {
   height: 48px;
   margin-left: 5px;
   font-size: 1.1em;
-  border: red solid 1px;
 }
 
 .restaurants_coeur {
   width: 30%;
-  height: 100%;
-  border: red solid 1px;
   position: relative;
   text-align: center;
+  z-index: 8;
 }
 
 section div p {
   margin: 0%;
 }
 
-.lecoeur {
-  width: 100%;
-  height: 100%;
-  font-size: 1.5rem;
-  border: red solid 1px;
+/*animationcoeur*/
+/* j 'ai crée 2 coeurs, un avec des bordures noire et l'autre en plein
+  ils ont tout les 2 la même taille, en position absolute
+  l'un au survole se rend en opicty 0 et l'autre en opacité 1*/
+.containercoeur {
   margin: auto;
-  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
+  position: relative;
 }
 
-.lecoeur:hover {
-  display: none;
-}
-
-.coeurgros {
+.fa-heart {
   font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.coeurvide {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  color: transparent;
-  z-index: 2;
+  z-index: 1;
 }
 
-.coeurgros:hover {
+.coeurplein {
   color: #9356DC;
-  z-index: 10;
+  opacity: 0;
 }
 
+.coeurvide:hover + .coeurplein {
+  opacity: 1;
+  transition: 1s;
+  animation: kerrempli 800ms;
+}
+
+.coeurvide:hover {
+  opacity: 0;
+  transition: 800ms;
+}
+
+@keyframes kerrempli {
+  0% {
+    color: transparent;
+    transform: scale(0.2);
+  }
+  100% {
+    color: linear-gradient(37deg, #FF79DA, #9356DC);
+    transform: scale(1);
+  }
+}
 section div a {
   text-decoration: none;
   color: black;
@@ -410,12 +434,14 @@ section div a {
 
 .menu {
   width: 100%;
-  height: 100%;
+  height: 729px;
   background-color: #f2f2f2;
   border-radius: 20px 20px 0 0;
+  margin: auto;
   margin-top: -50px;
   margin-bottom: -20px;
   overflow: overlay;
+  z-index: 10;
 }
 
 figure {
@@ -441,28 +467,85 @@ figure {
 .menutitre {
   width: 86%;
   font-family: shrikhand;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-align: left;
 }
 
-.entrée_descriptif {
-  display: flex;
-  margin: 10px;
-  align-items: flex-end;
-  background-color: white;
-  border-radius: 17px;
-  animation: apparitionmenu 5s;
+.restaurants_cards {
+  width: 95%;
+  margin: auto;
+  box-shadow: 10px 11px 15px #ececec;
 }
 
-@keyframes apparitionmenu {
+.restaurants_cards1 {
+  background-color: white;
+}
+
+/*animation opacité et translate*/
+.opacite {
+  animation-name: boutonopacite;
+  animation-duration: 2s;
+  animation-delay: 100ms;
+}
+
+@keyframes boutonopacite {
   0% {
     opacity: 0;
+    transform: translate(0px, 20px);
   }
-  50% {
+  20% {
+    opacity: 0;
+  }
+  80% {
     opacity: 1;
   }
   100% {
-    opacity: 2;
+    opacity: 1;
+    transform: translate 0px, 80px;
+  }
+}
+.opacite2 {
+  animation-name: boutonopacite2;
+  animation-duration: 2.5s;
+  animation-delay: 100ms;
+}
+
+@keyframes boutonopacite2 {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 20px);
+  }
+  20% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate 0px, 80px;
+  }
+}
+.opacite3 {
+  animation-name: boutonopacite3;
+  animation-duration: 3s;
+  animation-delay: 100ms;
+}
+
+@keyframes boutonopacite3 {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 20px);
+  }
+  20% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate 0px, 80px;
   }
 }
 .entrée_descriptif2 {
@@ -486,6 +569,40 @@ figure {
     opacity: 2;
   }
 }
+/*pages des menus */
+/*header menu*/
+.headermenu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.retourmenu1 {
+  width: 8%;
+}
+
+.retourmenu {
+  width: 5%;
+  display: flex;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.logomenu {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  text-align: right;
+}
+
+.soulignement {
+  width: 27px;
+  border: 1px solid #99E2D0;
+  margin-top: 0;
+  margin-left: 5%;
+}
+
 .entrée_descriptif3 {
   display: flex;
   margin: 10px;
@@ -494,6 +611,95 @@ figure {
   border-radius: 17px;
   animation: apparitionmenu 15s;
   animation-delay: 6s;
+}
+
+/*animation check hover*/
+.entrée_descriptif:hover {
+  box-shadow: 0px 1px 0px 0px black;
+}
+.entrée_descriptif:hover .check {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 75%;
+  transform: translate(0, 0, 0, 5px);
+  transition: 1s;
+  z-index: 30;
+  background-color: green;
+}
+.entrée_descriptif:hover .check1 {
+  background-color: white;
+  font-size: 1rem;
+  padding: 3px;
+  border-radius: 13px;
+  transform: rotate(-360deg);
+  transition: 2s;
+}
+.entrée_descriptif:hover .menu--prix {
+  transform: translate(-100px, 0);
+  transition: 1s;
+}
+.entrée_descriptif:hover .check {
+  background-color: #99E2D0;
+  width: 76px;
+  margin-right: 0;
+  padding: 0%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0%;
+  left: 80%;
+  z-index: 10;
+}
+.entrée_descriptif:hover .check1:hover {
+  transform: rotate(-360deg);
+  transition: 1s;
+}
+
+.entrée_descriptif:hover::after .check1:hover {
+  transform: rotate(360deg);
+  transition: 2s;
+}
+.entrée_descriptif:hover::after .check {
+  background-color: #99E2D0;
+  width: 10px;
+  margin-right: 0;
+  padding: 0%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0%;
+  left: 80%;
+  z-index: 2;
+}
+.entrée_descriptif:hover::after .menu--prix {
+  transform: translate(20px, 0);
+  opacity: 2;
+  transition: 0.6ms;
+}
+
+.check {
+  width: 0px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 100%;
+  color: #99E2D0;
+  border-radius: 0 10px 10px 0;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.check1:hover {
+  transform: rotate(-360deg);
+  transition: 2s;
 }
 
 @keyframes apparitionmenu {
@@ -516,44 +722,170 @@ figure {
 }
 
 .menu--titres {
+  width: 91%;
+  margin-top: 20px;
+  margin-left: 12px;
   font-family: roboto;
-  padding-left: 10px;
+  padding-left: 3px;
   font-size: 1rem;
   font-weight: 400;
-  text-decoration: underline #99E2D0 0.5rem;
+  margin-bottom: 0;
 }
 
 .menu--nomsplats {
+  width: 80%;
   font-size: 1rem;
   padding-left: 5px;
-  font-weight: 600;
 }
 
 .menu--description {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   padding-left: 5px;
   font-weight: 200;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .entrée_noms {
-  width: 75%;
+  width: 100%;
+  font: x-large;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu--prix {
   width: 24%;
   font-weight: 600;
   text-align: center;
-  border: 1px red solid;
-}
-.menu--prix:hover {
-  transform: translate(-80px, 0);
-  border: 1px red solid;
+  padding: 10px;
+  z-index: 6;
 }
 
 .boutoncommander {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 47px;
   text-align: center;
+}
+
+.bouton_commander {
+  margin-bottom: -10px;
+}
+
+/*animation bouton check*/
+.carteresto {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  border-radius: 17px;
+}
+
+.carteresto:hover {
+  box-shadow: 0px 1px 0px 0px black;
+}
+.carteresto:hover .checkplat {
+  width: 26%;
+  z-index: 100;
+  animation-name: checkplatanim;
+  animation-duration: 3s;
+}
+.carteresto:hover .checkrotdegrees {
+  border: 1px solid;
+  margin: auto;
+  border-radius: 30px;
+  background-color: #99E2D0;
+  animation: checkrotate 3s;
+}
+
+@keyframes checkrotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate -360deg;
+  }
+}
+@keyframes checkplatanim {
+  0% {
+    width: 5%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+.checkplat {
+  overflow: hidden;
+  z-index: -100;
+}
+
+.containerplat {
+  width: 100%;
+  min-width: 20px;
+  font-size: x-large;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 11px 15px #ececec;
+}
+
+.description {
+  font-size: 0.7rem;
+  height: 100%;
+  padding-left: 5px;
+  font-weight: 200;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.intitulé {
+  font-size: 0.8rem;
+  padding-left: 5px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.containerplattext {
+  width: 80%;
+}
+
+.prixplat {
+  width: 24%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  padding: 0;
+  transition: transform 6s;
+}
+
+.checkplat {
+  width: 0px;
+  height: 52px;
+  color: white;
+  border-radius: 0 10px 10px 0;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+}
+
+.check1bis {
+  font-size: 1rem;
+  border: 1px solid white;
+  border-radius: 90px;
+  text-align: right;
+  margin: auto;
 }
 
 @media screen and (min-width: 450px) and (max-width: 769px) {
@@ -561,6 +893,24 @@ figure {
     display: flex;
     justify-content: flex-start;
     margin: auto;
+  }
+
+  .restaurants {
+    width: 100%;
+    height: 726px;
+    margin: 0;
+    background-color: #f2f2f2;
+  }
+
+  .menu--titres {
+    width: 91%;
+    margin-top: 20px;
+    margin-left: 33px;
+    font-family: roboto;
+    padding-left: 3px;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0;
   }
 
   .reservation_search {
@@ -584,7 +934,8 @@ figure {
 }
 @media screen and (min-width: 876px) {
   body {
-    width: 100%;
+    width: 96%;
+    max-width: 1200px;
     margin: auto;
   }
 
@@ -598,12 +949,20 @@ figure {
     flex-wrap: wrap;
   }
 
+  .restaurants {
+    width: 100%;
+    height: 473px;
+    margin: 0;
+    background-color: #f2f2f2;
+  }
+
   .reservation_boutonchoisir {
     width: 28%;
   }
 
-  h2 {
+  h2 .titremenu {
     width: 100%;
+    padding: 4%;
   }
 
   .restaurants_cards {
@@ -613,13 +972,40 @@ figure {
     margin: auto;
   }
 
+  .repas {
+    display: flex;
+  }
+
+  .entrée1 {
+    width: 33%;
+  }
+
+  .plats {
+    width: 30%;
+  }
+
+  .boutoncommander {
+    margin-top: 10px;
+    margin-bottom: 60px;
+  }
+
+  .nomrestaurant_titre {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
   section div a {
     width: 45%;
     margin-bottom: 15px;
   }
 
   .entrée_descriptif {
-    width: 35%;
+    width: 98%;
+    margin-right: 3px;
+  }
+
+  .retourmenu {
+    font-size: 3rem;
   }
 
   .cardrestaurant__nouveau {
@@ -627,7 +1013,7 @@ figure {
     right: 164px;
     border: 1px solid #99E2D0;
     background: #99E2D0;
-    width: 12%;
+    width: 16%;
     text-align: center;
     font-size: 0.9rem;
     font-weight: 500;
@@ -645,6 +1031,7 @@ figure {
   footer {
     width: 99%;
     padding-left: 10px;
+    margin-top: -30px;
     text-align: center;
   }
 
@@ -655,17 +1042,17 @@ figure {
   .entrée2 {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
   }
 
   .entrée3 {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
   }
 
   .plats {
-    width: 100%;
+    width: 33%;
   }
 
   .desserts {
@@ -677,7 +1064,8 @@ figure {
   }
 
   .menu {
-    height: 550px;
+    height: 380px;
+    margin: auto;
   }
 
   .cardrestaurant__nouveau {
@@ -686,7 +1074,7 @@ figure {
     margin-top: 10px;
     border: 1px solid #99E2D0;
     background: #99E2D0;
-    width: 13%;
+    width: 16%;
     text-align: center;
     font-size: 0.9rem;
     font-weight: 500;
