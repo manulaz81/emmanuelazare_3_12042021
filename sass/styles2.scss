@@ -787,6 +787,7 @@ margin-bottom: -10px;
     font-size: 0.7rem;
     height: 100%;
     padding-left: 5px;
+    padding-bottom: 7px;
     font-weight: 200;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -808,12 +809,13 @@ margin-bottom: -10px;
 }
 .prixplat{
     width: 24%;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 600;
     text-align: center;
     padding: 10px;
     padding:0;
     transition:transform 6s;
+    margin-bottom: -22px;
     }
 
 .checkplat {
