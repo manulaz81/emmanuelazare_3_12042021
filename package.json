@@ -6,7 +6,7 @@
   "scripts": {
     
     "sass": "sass --watch sass/styles2.scss:sass/styles2.css ",
-    "prefix": "postcss .sass/styles2.css --use autoprefixer .sass/"
+    "prefix": "postcss sass/styles2.css --use autoprefixer sass/"
   },
 
   "repository": {

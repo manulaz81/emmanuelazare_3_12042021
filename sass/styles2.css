@@ -70,7 +70,7 @@ body {
   transition-delay: 1ms;
   position: fixed;
   opacity: 0;
-  z-index: 999;
+  z-index: -2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,7 +184,7 @@ body {
   width: 100%;
   margin: 10px 0 10px 0;
   height: 30px;
-  background-color: #f2f2f2;
+  background-color: #d6cfcf;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -789,15 +789,17 @@ figure {
 
 .carteresto:hover {
   box-shadow: 0px 1px 0px 0px black;
+  cursor: pointer;
 }
 .carteresto:hover .checkplat {
   width: 26%;
   z-index: 100;
   animation-name: checkplatanim;
-  animation-duration: 3s;
+  animation-duration: 600ms;
 }
 .carteresto:hover .checkrotdegrees {
   border: 1px solid;
+  padding: 3px;
   margin: auto;
   border-radius: 30px;
   background-color: #99E2D0;
@@ -808,7 +810,7 @@ figure {
   margin: auto;
   border-radius: 30px;
   background-color: #99E2D0;
-  animation: checkrotate 3s;
+  animation: checkrotate 1s;
 }
 
 @keyframes checkrotate {
@@ -832,7 +834,7 @@ figure {
     width: 5%;
   }
   100% {
-    width: 40%;
+    width: 26%;
   }
 }
 .checkplat {

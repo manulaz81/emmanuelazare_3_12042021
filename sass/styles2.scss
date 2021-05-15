@@ -44,7 +44,7 @@ position: relative;
     position:fixed;
     opacity:0;
     // margin: auto;  
-    z-index: 999;    
+    z-index: -2;    
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -148,7 +148,7 @@ background-color:white;}
     width: 100%;
     margin: 10px 0 10px 0;
     height: 30px;
-    background-color: #f2f2f2;
+    background-color: rgb(214, 207, 207);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -721,19 +721,24 @@ margin-bottom: -10px;
     background-color: white;
     align-items: center;
     border-radius:17px;   
+ 
+
 }
 .carteresto:hover 
 {
     box-shadow: 0px 1px 0px 0px black; 
+    cursor: pointer;
+   
    
     .checkplat{
         width: 26%;
         z-index: 100;
         animation-name: checkplatanim ;
-        animation-duration: 3s;
+        animation-duration: 600ms;
     }
     .checkrotdegrees{
         border: 1px solid;
+        padding:3px;
         margin: auto;
         border-radius: 30px;
         background-color: $tertiarycolor;
@@ -744,7 +749,7 @@ margin-bottom: -10px;
         margin: auto;
         border-radius: 30px;
         background-color: $tertiarycolor;
-        animation: checkrotate 3s;
+        animation: checkrotate 1s;
     }
 }
 @keyframes checkrotate
@@ -761,7 +766,7 @@ margin-bottom: -10px;
 @keyframes checkplatanim
 {
     0% {width:5%};
-    100% { width: 40%};
+    100% { width: 26%};
 }
 .checkplat
 {overflow: hidden;
@@ -819,7 +824,9 @@ margin-bottom: -10px;
     background-color: $tertiarycolor;
     display: flex;
     align-items: center;
+
 }
+
 
 .check1bis{
       
