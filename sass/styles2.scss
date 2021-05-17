@@ -30,15 +30,19 @@ position: relative;
     width:100%;
     margin: auto;
 }
+header{
+    margin-top:5px;
+    margin-bottom: 10px;
+}
 
 /*loader*/
 
 .loaderfood{
-   width:100vw;
-   max-width: 1200px;
-   height: 100vh;
+    width:100vw;
+    max-width: 1200px;
+    height: 100vh;
     font-size: 30px;
-        animation: loadopaque;
+    animation: loadopaque;
     animation-duration: 3s;
     transition-delay: 1ms;
     position:fixed;
@@ -65,7 +69,6 @@ position: relative;
 }
 .loader__box
 {
-
     // position:absolute;
     // opacity:1;
     // top:50%;
@@ -73,7 +76,6 @@ position: relative;
     display: flex;
     flex-direction: column;
 }
-
 
 /*loader quart de cercle*/
 
@@ -119,6 +121,10 @@ position: relative;
     animation-duration: 3s;
     z-index: -2;
 }
+ div a
+{
+    text-decoration: none;
+}
 
 @keyframes animebarre{
 0% { background-color: white;}
@@ -131,10 +137,10 @@ width:5%;}
 0% { opacity:1;
 background-color:white;z-index: 20;}
 
-95%{ opacity:1;
+90%{ opacity:1;
     background-color: white; }
 100% { opacity: 0;
-background-color:white;}
+background-color:white;z-index:20;}
 }
 
 /* header */
@@ -191,9 +197,13 @@ background-color:white;}
     width: 215px;
     height: 45px;
     border-radius: 30px;
+    margin: auto;
     color: white;
     background: linear-gradient(37deg, $secondarycolor,$primarycolor);
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .titremenu{
     width:95%;
@@ -249,10 +259,18 @@ header div a{
     font-size: 0.9rem;
     font-weight: 600;
 }
+.puce
+{
+    color:black;
+}
+
 .reservation_boutonchoisir:hover{
 background: lighten($primarycolor, 30%);
 .reservation_fonctionicone:hover{ color:$primarycolor};
-
+.puce
+{
+    color:$primarycolor;
+}
 }
 
 .reservation_fonctionicone{
@@ -272,7 +290,7 @@ background: lighten($primarycolor, 30%);
     margin:0%;
     height: 100px;
     object-fit: cover;
-    box-shadow:0px 0px 5px 5px #f2f2f2;
+    box-shadow:0px 0px 10px 10px #f2f2f2;
     border-radius: 10px 10px 0 0;
 }
 
@@ -355,7 +373,9 @@ section div p
 }
 
 .coeurplein{
-    color: $primarycolor;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     opacity: 0;
 }
 
@@ -376,7 +396,7 @@ section div p
 0%{color: transparent;transform: scale(0.2);  
 }
 
-100% {color:linear-gradient(37deg, $secondarycolor,$primarycolor);transform: scale(1);}
+100% {color:linear-gradient(to top right,$primarycolor,$secondarycolor);transform: scale(1);}
 
 }    
 
@@ -478,6 +498,8 @@ figure
                         100% { opacity: 1;transform: translate (0px, 80px);}
                         }
 
+  
+
 
 .entrée_descriptif2
 {
@@ -533,6 +555,8 @@ text-align: right;
 
 .soulignement{
     width:27px;
+    background-color:$tertiarycolor;
+    color:$tertiarycolor;
   border: 1px solid $tertiarycolor;
   margin-top: 0;
   margin-left: 5%;
@@ -552,7 +576,7 @@ text-align: right;
 /*animation check hover*/
 
 .entrée_descriptif:hover{ 
-    box-shadow: 0px 1px 0px 0px black;
+    
    
 
 
@@ -660,9 +684,9 @@ transform: scale(1);
 }
 
 .menu--titres{
-    width:91%;
+    width:90%;
     margin-top:20px;
-    margin-left: 12px;    
+    margin-left: 4%;    
     font-family:roboto;
     padding-left: 3px;
     font-size:1rem;
@@ -720,22 +744,56 @@ margin-bottom: -10px;
     justify-content: center;
     background-color: white;
     align-items: center;
-    border-radius:17px;   
- 
+    border-radius:17px;    
+    box-shadow: 2px 2px 2px #ececec;
+    .checkplat{
+        width: 0%;     
+        transition:1s;  
+        z-index: 100;
+    }
+    .checkrotdegrees{
+        border: 1px solid;
+        padding:3px;
+        margin: auto;
+        border-radius: 30px;
+        background-color: $tertiarycolor;
+        animation: checkrotate1 3s;
+    }
+    .checkrotdegrees{
+        border: 1px solid;
+        margin: auto;
+        border-radius: 30px;
+        background-color: $tertiarycolor;
+        animation: checkrotate2 1s;
+    }
+    @keyframes checkrotate1
+{
+    0% { transform: rotate(360deg);}
+100%{transform: rotate (-360deg);}
+}
+@keyframes checkrotate2
+{
+    0% { transform: rotate(360deg);}
+100%{transform: rotate (-360deg);}
+}
 
 }
 .carteresto:hover 
 {
-    box-shadow: 0px 1px 0px 0px black; 
     cursor: pointer;
+    transition:1s;
    
    
     .checkplat{
-        width: 26%;
+        width: 30%;
+        transition: 1s 0.5ms;
         z-index: 100;
-        animation-name: checkplatanim ;
-        animation-duration: 600ms;
+        // animation-name: checkplatanim ;
+        // animation-duration: 600ms;
+        // transition: width(60%) 4s ease-in 600ms;
+
     }
+
     .checkrotdegrees{
         border: 1px solid;
         padding:3px;
@@ -763,11 +821,11 @@ margin-bottom: -10px;
 100%{transform: rotate (-360deg);}
 }
 
-@keyframes checkplatanim
-{
-    0% {width:5%};
-    100% { width: 26%};
-}
+// @keyframes checkplatanim
+// {
+//     0% {width:5%};
+//     100% { width: 26%};
+// }
 .checkplat
 {overflow: hidden;
     z-index: -100;}
@@ -858,9 +916,9 @@ margin-bottom: -10px;
     background-color: #f2f2f2;
 }
 .menu--titres{
-    width:91%;
+    width:90%;
     margin-top:20px;
-    margin-left: 33px;    
+    margin-left: 4%;    
     font-family:roboto;
     padding-left: 3px;
     font-size:1rem;
@@ -950,7 +1008,7 @@ margin-bottom: -10px;
 }
 .retourmenu
 {
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
  .cardrestaurant__nouveau { 
       position: absolute;  

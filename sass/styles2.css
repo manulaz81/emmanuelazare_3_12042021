@@ -44,6 +44,11 @@ footer {
   margin-bottom: 5px;
 }
 
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
 /*couleur*/
 /*fonts*/
 /*page index*/
@@ -57,6 +62,11 @@ body {
 #bloc_page {
   width: 100%;
   margin: auto;
+}
+
+header {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 /*loader*/
@@ -141,6 +151,10 @@ body {
   z-index: -2;
 }
 
+div a {
+  text-decoration: none;
+}
+
 @keyframes animebarre {
   0% {
     background-color: white;
@@ -164,13 +178,14 @@ body {
     background-color: white;
     z-index: 20;
   }
-  95% {
+  90% {
     opacity: 1;
     background-color: white;
   }
   100% {
     opacity: 0;
     background-color: white;
+    z-index: 20;
   }
 }
 /* header */
@@ -236,9 +251,13 @@ body {
   width: 215px;
   height: 45px;
   border-radius: 30px;
+  margin: auto;
   color: white;
   background: linear-gradient(37deg, #FF79DA, #9356DC);
   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .titremenu {
@@ -297,10 +316,17 @@ header div a {
   font-weight: 600;
 }
 
+.puce {
+  color: black;
+}
+
 .reservation_boutonchoisir:hover {
   background: #e4d5f6;
 }
 .reservation_boutonchoisir:hover .reservation_fonctionicone:hover {
+  color: #9356DC;
+}
+.reservation_boutonchoisir:hover .puce {
   color: #9356DC;
 }
 
@@ -320,7 +346,7 @@ header div a {
   margin: 0%;
   height: 100px;
   object-fit: cover;
-  box-shadow: 0px 0px 5px 5px #f2f2f2;
+  box-shadow: 0px 0px 10px 10px #f2f2f2;
   border-radius: 10px 10px 0 0;
 }
 
@@ -402,7 +428,9 @@ section div p {
 }
 
 .coeurplein {
-  color: #9356DC;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
 }
 
@@ -423,7 +451,7 @@ section div p {
     transform: scale(0.2);
   }
   100% {
-    color: linear-gradient(37deg, #FF79DA, #9356DC);
+    color: linear-gradient(to top right, #9356DC, #FF79DA);
     transform: scale(1);
   }
 }
@@ -598,6 +626,8 @@ figure {
 
 .soulignement {
   width: 27px;
+  background-color: #99E2D0;
+  color: #99E2D0;
   border: 1px solid #99E2D0;
   margin-top: 0;
   margin-left: 5%;
@@ -614,9 +644,6 @@ figure {
 }
 
 /*animation check hover*/
-.entrée_descriptif:hover {
-  box-shadow: 0px 1px 0px 0px black;
-}
 .entrée_descriptif:hover .check {
   position: absolute;
   top: 0;
@@ -722,9 +749,9 @@ figure {
 }
 
 .menu--titres {
-  width: 91%;
+  width: 90%;
   margin-top: 20px;
-  margin-left: 12px;
+  margin-left: 4%;
   font-family: roboto;
   padding-left: 3px;
   font-size: 1rem;
@@ -785,17 +812,53 @@ figure {
   background-color: white;
   align-items: center;
   border-radius: 17px;
+  box-shadow: 2px 2px 2px #ececec;
+}
+.carteresto .checkplat {
+  width: 0%;
+  transition: 1s;
+  z-index: 100;
+}
+.carteresto .checkrotdegrees {
+  border: 1px solid;
+  padding: 3px;
+  margin: auto;
+  border-radius: 30px;
+  background-color: #99E2D0;
+  animation: checkrotate1 3s;
+}
+.carteresto .checkrotdegrees {
+  border: 1px solid;
+  margin: auto;
+  border-radius: 30px;
+  background-color: #99E2D0;
+  animation: checkrotate2 1s;
+}
+@keyframes checkrotate1 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate -360deg;
+  }
+}
+@keyframes checkrotate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate -360deg;
+  }
 }
 
 .carteresto:hover {
-  box-shadow: 0px 1px 0px 0px black;
   cursor: pointer;
+  transition: 1s;
 }
 .carteresto:hover .checkplat {
-  width: 26%;
+  width: 30%;
+  transition: 1s 0.5ms;
   z-index: 100;
-  animation-name: checkplatanim;
-  animation-duration: 600ms;
 }
 .carteresto:hover .checkrotdegrees {
   border: 1px solid;
@@ -827,14 +890,6 @@ figure {
   }
   100% {
     transform: rotate -360deg;
-  }
-}
-@keyframes checkplatanim {
-  0% {
-    width: 5%;
-  }
-  100% {
-    width: 26%;
   }
 }
 .checkplat {
@@ -922,9 +977,9 @@ figure {
   }
 
   .menu--titres {
-    width: 91%;
+    width: 90%;
     margin-top: 20px;
-    margin-left: 33px;
+    margin-left: 4%;
     font-family: roboto;
     padding-left: 3px;
     font-size: 1rem;
@@ -1022,7 +1077,7 @@ figure {
   }
 
   .retourmenu {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 
   .cardrestaurant__nouveau {
