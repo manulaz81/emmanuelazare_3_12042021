@@ -88,8 +88,8 @@ header{
     border-radius: 50px;
     border: 5px solid transparent;
     margin: auto;
-    border-top: turquoise 5px solid;
-    border-bottom: turquoise 5px solid;
+    border-top: $tertiarycolor 5px solid;
+    border-bottom: $tertiarycolor 5px solid;
     animation-name: loaderanim;
     animation-duration: 3s;
     z-index:25;
@@ -183,6 +183,9 @@ background-color:white;z-index:20;}
     font-size: 1.3rem;
     text-align: left;
     font-family: shrikhand;
+}
+.reservation_reserv{
+    margin-top:-19px;
 }
 .reservation_découverte{
     width: 100%;
@@ -497,10 +500,6 @@ figure
                             80% {opacity:1;}
                         100% { opacity: 1;transform: translate (0px, 80px);}
                         }
-
-  
-
-
 .entrée_descriptif2
 {
     display: flex;
@@ -569,17 +568,12 @@ text-align: right;
     background-color:white;
     border-radius: 17px;   
     animation: apparitionmenu 15s;
-    animation-delay: 6s;
-   
+    animation-delay: 6s;   
 }
 
 /*animation check hover*/
 
 .entrée_descriptif:hover{ 
-    
-   
-
-
 .check
 {
     position: absolute;
@@ -599,11 +593,8 @@ text-align: right;
 }
 .menu--prix{
     transform: translate(-100px,0);
-    transition:1s ;
-   
+    transition:1s ;   
 }   
-
-
 .check{ 
     background-color: $tertiarycolor;
     width: 76px;
@@ -617,9 +608,7 @@ text-align: right;
     transform:rotate(-360deg);
      transition: 1s ;
 }
-
 }
-
 
 .entrée_descriptif:hover::after{
     .check1:hover
@@ -883,24 +872,16 @@ margin-bottom: -10px;
     background-color: $tertiarycolor;
     display: flex;
     align-items: center;
-
 }
 
-
-.check1bis{
-      
+.check1bis{      
     font-size: 1rem; 
     border: 1px solid white;
     border-radius: 90px;
     text-align: right;
     margin: auto;
 }
-
-
 @media screen and (min-width: 450px) and (max-width:769px )
-
-
-
 
 {
 .reservationmenubloc{
